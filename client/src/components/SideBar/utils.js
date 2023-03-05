@@ -1,0 +1,32 @@
+export const menus = [
+  {
+    type:'dashboard',
+    text:'dashboard',
+    link:'#',
+  },
+  {
+    type:'admin',
+    text:'team',
+    link:'#',
+  },
+  {
+    type:'agent',
+    text:'agents',
+    link:'#',
+  },
+  {
+    type:'map',
+    text:'Map',
+    link:'#',
+  },
+  {
+    type:'bell',
+    text:'notifications',
+    link:'#',
+  },
+  {
+    type:'params',
+    text:'settings',
+    link:'#',
+  },
+]
