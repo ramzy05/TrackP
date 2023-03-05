@@ -10,12 +10,7 @@ const SideBar = () => {
 	return (
 		<div
 			className={`side-bar transition-all duration-500 ${isCollapsed?'w-14':'w-60'}
-			${isCollapsed?'py-10 ' :'py-8'} 
-			bg-white 
-			h-screen
-			min-h-screen
-			overflow-y-auto
-			
+			${isCollapsed?'py-3 ' :'py-1'}  bg-white  h-screen min-h-screen overflow-y-auto
 			`}
 			>
 				<div className={`flex flex-col
