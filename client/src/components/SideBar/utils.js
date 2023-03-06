@@ -2,7 +2,7 @@ export const menus = [
   {
     type:'dashboard',
     text:'dashboard',
-    link:'#',
+    link:'/',
   },
   {
     type:'admin',
@@ -17,7 +17,7 @@ export const menus = [
   {
     type:'map',
     text:'Map',
-    link:'#',
+    link:'/map',
   },
   {
     type:'bell',

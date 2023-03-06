@@ -3,14 +3,16 @@ import {MenuItem} from '../'
 import { RiMenu5Line } from 'react-icons/ri'
 import logo from '../../assets/logo.svg'
 import {menus} from './utils'
+import { notify } from '../../utils'
 
-const SideBar = () => {
-	const [isCollapsed, setIsCollapsed] = useState(true)
-	const [isActive, setIsActive] = useState(menus[0].type)
+const SideBar = ({activeMenu, setActiveMenu}) => {
+	const [isCollapsed, setIsCollapsed] = useState(false)
 	return (
 		<div
 			className={`side-bar transition-all duration-500 ${isCollapsed?'w-14':'w-60'}
-			${isCollapsed?'py-3 ' :'py-1'}  bg-white  h-screen min-h-screen overflow-y-auto
+			${isCollapsed?'py-3 ' :'py-1'}  bg-white box-shadow  h-full min-h-full overflow-y-auto
+				sticky top-0 left-0 bottom-0
+
 			`}
 			>
 				<div className={`flex flex-col
@@ -23,7 +25,7 @@ const SideBar = () => {
 					`}
 					>
 						<div className={`flex items-center w-full ${!isCollapsed?'justify-between':'justify-center'} sticky top-7  left-0`}>
-							<a href="#">
+							<a href="#" onClick={e=>notify('Hello world', 'success')}>
 							<img className={`${isCollapsed && 'hidden'}`} src={logo} alt="logo TrackP"  />
 							</a>
 							<div onClick={e => setIsCollapsed(!isCollapsed) }
@@ -41,8 +43,8 @@ const SideBar = () => {
 								type={m.type}
 								link={m.link} 
 								text={m.text}
-								isActive={isActive}
-								setIsActive={setIsActive}
+								activeMenu={activeMenu}
+								setActiveMenu={setActiveMenu}
 								isCollapsed = {isCollapsed}
 								setIsCollapsed = {setIsCollapsed}
 								

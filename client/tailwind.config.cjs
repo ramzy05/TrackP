@@ -26,6 +26,10 @@ module.exports = {
         error:'#FF4040',
         success:'#21C21E',
         warning:'#FFB053',
+        cardColor0:'#557AFF',
+        cardColor1:'#3CC0FE',
+        cardColor2:'#FFA443',
+        blurColor:'#D1D1D10F',
       }
     },
   },

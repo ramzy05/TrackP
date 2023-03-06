@@ -1,6 +1,6 @@
 import { IoPeopleSharp,HiSquares2X2 ,IoIosPeople,FaMap ,FaBell,IoSettingsSharp} from 'react-icons/all'
 
-export function getIcons(type){
+export function getIcon(type){
   let icon = <></>;
   switch (type) {
     case 'dashboard':
