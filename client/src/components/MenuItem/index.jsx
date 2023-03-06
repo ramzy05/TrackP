@@ -11,7 +11,8 @@ const MenuItem = ({type, link, text,isActive, setIsActive, isCollapsed, setIsCol
   }
 	return (
 		<a href={link} onClick={e=> handleOnClick()}
-      className={` flex items-center ${!isCollapsed && 'pl-4 py-4 gap-2 font-medium text-base rounded-2xl'}
+      title={isCollapsed && text[0].toUpperCase()+text.slice(1)}
+      className={`menu-link flex items-center ${!isCollapsed && 'pl-4 py-4 gap-2 font-medium text-base rounded-2xl'}
       ${active && !isCollapsed?'text-white bg-accent':'text-primary'}
       ${isCollapsed && 'justify-center'}
     `}
